@@ -4,11 +4,7 @@
 		"node": true,
 		"jest": true
 	},
-	"extends": [
-		"standard",
-		"plugin:prettier/recommended",
-		"@react-native-community"
-	],
+	"extends": ["standard", "plugin:prettier/recommended", "@react-native-community"],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly",
@@ -24,22 +20,21 @@
 	},
 	"plugins": ["react", "prettier"],
 	"rules": {
-		"prettier/prettier": [
-			"error",
-			{
-				"tabWidth": 4,
-				"useTabs": true,
-				"singleQuote": true,
-				"semi": false,
-				"printWidth": 150
-			}
-		],
 		"semi": "off",
 		"indent": [
 			"error",
 			"tab",
 			{
 				"SwitchCase": 1
+			}
+		],
+		"max-len": [
+			"error",
+			{
+				"code": 150,
+				"ignoreComments": true,
+				"ignoreStrings": true,
+				"ignoreUrls": true
 			}
 		],
 		"react/jsx-uses-react": "error",
